@@ -1,5 +1,6 @@
 
 let textoPrueba = "el gato es gruñon";
+//enterl gaitober enters grufatñobern
 let LlaveEntrada = ['a','e','i','o','u'];
 let LlaveSalida = ['ai','enter','imes','ober','ufat'];
 
@@ -11,6 +12,7 @@ function inicializador() {
     let listaDeTexto = separadorDeTexto(textoPrueba);
     let textoFinal = unificadorDeTexto(listaDeTexto);
     console.log (textoFinal);
+    desencriptar(textoFinal);
 }
 // Aqui separaremos el texto ingresado y lo agregaremos a una lista
 function separadorDeTexto(texto) {
@@ -56,4 +58,18 @@ function unificadorDeTexto(listaDeTexto) {
     return textoUnificado;
 }
 
+function desencriptar(textoEncriptado) {
+    let texto = textoEncriptado
+        .replace(/enter/gi, "e")
+        .replace(/imes/gi, "i")
+        .replace(/ai/gi, "a")
+        .replace(/ober/gi, "o")
+        .replace(/ufat/gi, "u");
+    console.log (texto);
+}
+
+
 inicializador();
+
+
+
