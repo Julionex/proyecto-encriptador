@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1 class="container">
+    <section class="container">
         <div class="encriptar">
             <textarea name="texto" id="texto" class="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-        </div>
+        
         <div class="terminos">
             <p>Solo letras minusculas y sin acentos</p>
+        </div>
         </div>
         <div class="botones">
             <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
             <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
         </div>
     
-    <h2 class="encriptado">
-        <img src="" alt="" srcset="" id="dibujo">
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-            <h3 id="titulo-mensaje">ningun mensaje encontrado</h3>
-            <p id="parrafo">Ingresa en texto que deseas encriptar o desencriptar</p>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
-        </div>
-    </h2>
-    </h1>
+        <section class="encriptado">
+            <img src="" alt="" srcset="" id="dibujo">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h3 id="titulo-mensaje">ningun mensaje encontrado</h3>
+                <p id="parrafo">Ingresa en texto que deseas encriptar o desencriptar</p>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+            </div>
+        </section>
+    </section>
 </body>
 <script src="main.js"></script>
 </html>
