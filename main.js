@@ -49,13 +49,40 @@ function logicaLlaves(caracter) {
 
 }
 
-/*une el texto de la lista y devuelve un string */
-function unificadorDeTexto(listaDeTexto) {
-    let textoUnificado = '';
-    for (let contador = 0; contador < listaDeTexto.length; contador ++){
-        textoUnificado = textoUnificado + listaDeTexto [contador];
+// /*une el texto de la lista y devuelve un string */
+// function unificadorDeTexto(listaDeTexto) {
+//     let textoUnificado = '';
+//     for (let contador = 0; contador < listaDeTexto.length; contador ++){
+//         textoUnificado = textoUnificado + listaDeTexto [contador];
+//     }
+//     return textoUnificado;
+// }
+
+
+function encriptar() {
+    let texto = document.getElementById("texto").value;
+    let tituloMensaje = document.getElementById("titulo-mensaje");
+    let parrafo = document.getElementById("parrafo");
+    let muneco = document.getElementById("muñeco");
+    
+    let textoCifrado = texto
+                        .replace(/e/gi, "enter")
+                        .replace(/i/gi, "imes")
+                        .replace(/a/gi, "ai")
+                        .replace(/o/gi, "ober")
+                        .replace(/u/gi, "ufat");
+    
+    if (texto.value.length != 0){
+        texto.value = textoCifrado;
+        tituloMensaje.textContent = "Texto encriptado con Exito";
+        parrafo.textContent = "";
+        muneco.src = "./img/encriptado.jpg";
+    } else {
+        muneco.src = "./img/muñeco.png";
+        tituloMensaje.textContent = "Ningun mensaje fue encontrado";
+        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        alert("Debes ingresar algun texto");
     }
-    return textoUnificado;
 }
 
 function desencriptar(textoEncriptado) {
